@@ -11,10 +11,9 @@ RNA-seq Differential Expression project with Siphamia tubifer and Photobacterium
 6. GO enrichment
 
 ## Fish
+2. Trim barecodes from fish muscle sequences with Flexbar (flexM.slurm)
 1. Create bowtie2 reference index for P. mandapamensis genome
 2. Align mixed fish and bacteria (Light Organ) samples to bacteria genome with bowtie2 (align.slurm)
-2. Trim barecodes from fish muscle sequences with Flexbar
-3. Align mixed fish and bacteria (Light Organ) samples to bacteria genome with bowtie2
 4. Create file of unaligned sequences - these are the fish LO sequences - Samtools
 5. Convert LO files to fastq files - bedtools
 6. Construct a reference transcriptome with Trinity
