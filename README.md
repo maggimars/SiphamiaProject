@@ -19,7 +19,7 @@ RNA-seq Differential Expression project with Siphamia tubifer and Photobacterium
 6. Construct a reference transcriptome with Trinity (trinity.slurm)
 7. Add spike-in sequences to Trinity file
 8. Creat reference index with RSEM (trans_genemap.slurm, reftrans.slurm)
-9. Calculate differential expression with RSEM 
+9. Calculate differential expression with RSEM (floRSEM.slurm, fmRSEM.slurm)
 10. Analyse differential expression with edgeR
 11. Filter Trinity.fasta file to remove genes with less than 1 FPKM averaged across samples and keep only the longest isoform for each gene - Biopython
 12. GO enrichment
