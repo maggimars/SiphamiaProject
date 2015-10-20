@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=ref_trans
+#SBATCH --job-name=floRSEM
 #SBATCH --partition=compute
 #SBATCH --time=150:30:00
 #SBATCH --mem=64G
@@ -9,12 +9,13 @@
 #SBATCH --mail-user=margaret.marsbrisbin@oist.jp
 #SBATCH --mail-type=BEGIN,FAIL,END
 #SBATCH --input=none
-#SBATCH --output=ref_trans_%j.out
-#SBATCH --error=ref_trans_%j.err
+#SBATCH --output=floRSEM_%j.out
+#SBATCH --error=floRSEM_%j.err
+#SBATCH --array 2-5
 . $HOME/.bashrc
 
 DATA=/home/m/maggi-brisbin/SiphComp/fishfiles
-    
-. $HOME/trinityrnaseq-2.1.0/util/align_and_estimate_abundance.pl --transcripts $DATA/trinity_out_dir/Trinity.fasta \
---est_method RSEM --aln_method bowtie --trinity_mode --prep_reference --output_prefix $DATA/ref_transcript/ref_transcript
 
+rsem-calculate-expression --bowtie2 --bowtie2-sensitivity-level very_sensitive --seed-length 19 --num-threads 12 \
+--paired-end $DATA/LO${SLURM_ARRAY_TASK_ID}.end1.fastq $DATA/LO${SLURM_ARRAY_TASK_ID}.end2.fastq \
+$DATA/ref_transcript/ts_bt2_ref $HOME/SiphComp/fishRSEM/LO${SLURM_ARRAY_TASK_ID}
