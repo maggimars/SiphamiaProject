@@ -7,7 +7,7 @@ RNA-seq Differential Expression project with Siphamia tubifer and Photobacterium
 2. Create reference genome index with RSEM (rsem_ref.slurm)
 3. Trim barcodes from sample files with Flexbar (trim_bact.slurm, trim_lo.slurm)
 4. Calculate differential expression with RSEM (bactRSEM.slurm, loRSEM.slurm)
-5. Analyse differential expression with edgeR 
+5. Analyse differential expression with edgeR (bacteria.genes.R)
 6. GO enrichment
 
 ## Fish
