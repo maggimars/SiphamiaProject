@@ -21,5 +21,5 @@ RNA-seq Differential Expression project with Siphamia tubifer and Photobacterium
 8. Creat reference index with RSEM (trans_genemap.slurm, reftrans.slurm)
 9. Calculate differential expression with RSEM (floRSEM.slurm, fmRSEM.slurm)
 10. Analyse differential expression with edgeR
-11. Filter Trinity.fasta file to remove genes with less than 1 FPKM averaged across samples and keep only the longest isoform for each gene - Biopython
+11. Filter Trinity.fasta file to remove genes with less than 1 FPKM averaged across samples and keep only the longest isoform for each gene - Biopython (https://gist.github.com/maggimars/dde254a81a453bd30b54, (https://gist.github.com/maggimars/e746b0fed46a5c6222d1)
 12. GO enrichment
